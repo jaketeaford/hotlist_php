@@ -1,15 +1,24 @@
 <?php
+
+    /*
+        createUser.php
+        Purpose:
+            Showcases an example of how to register a new user using the vbAPI class, just fill in the empty strings
+            where necessary. Since this is a call to register a new member, logging in before making the request is
+            not necessary.
+    */
+
     include('classes/vbAPI.php');
     $api = new vbAPI();
 
     $newUserInfo = $api->execRequest(array(
         'api_m' => 'register_addmember',
         'agree' => true,
-        'username' => 'apiTestUser2',
-        'email' => 'jaketeaford+wfapi2@gmail.com',
-        'emailconfirm' => 'jaketeaford+wfapi2@gmail.com',
-        'password_md5' => md5('api123test'),
-        'passwordconfirm_md5' => md5('api123test'),
+        'username' => '',
+        'email' => '',
+        'emailconfirm' => '',
+        'password_md5' => md5(''),
+        'passwordconfirm_md5' => md5(''),
 
     ));
 
